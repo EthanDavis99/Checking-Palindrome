@@ -1,0 +1,20 @@
+def is_palindrome(word):
+    """
+    Checks if a word is a palindrome (reads the same forwards and backwards).
+    """
+    reversed_word = word[::-1]
+
+    return word == reversed_word
+
+
+def print_palindrome_status(word):
+    """
+    Prints whether the given word is a palindrome or not.
+    """
+    is_pal = is_palindrome(word)
+    status = "is a palindrome." if is_pal else "is not a palindrome."
+    print(f"The word '{word}' {status}")
+
+
+text = "radar"
+print_palindrome_status(text)
